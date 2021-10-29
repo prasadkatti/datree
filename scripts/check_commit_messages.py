@@ -36,6 +36,7 @@ if __name__ == "__main__":
 
     with open(os.environ.get("GITHUB_EVENT_PATH")) as f:
         data = json.load(f)
+        print(data)
         for c in data["commits"]:
             msg = c["message"]
             commit_msg_len(msg)
